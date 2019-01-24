@@ -1,0 +1,5 @@
+@mixin media_query( $size ) {
+  @media only screen and ( map-get( $breakpoints, $size ) ) {
+    @content
+  }
+}

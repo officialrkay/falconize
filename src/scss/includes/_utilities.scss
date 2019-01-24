@@ -1,0 +1,109 @@
+// Font Weight Classes
+.is-font-lighten {
+  font-weight: 100 !important;
+}
+.is-font-light {
+  font-weight: 200 !important;
+}
+.is-font-semi-light {
+  font-weight: 300 !important;
+}
+.is-font-medium {
+  font-weight: 400 !important;
+}
+.is-font-semi-bold {
+  font-weight: 600 !important;
+}
+.is-font-bold {
+  font-weight: 600 !important;
+}
+.is-font-bolder {
+  font-weight: 700 !important;
+}
+.is-font-dark {
+  font-weight: 800 !important;
+}
+.is-font-darken {
+  font-weight: 900 !important;
+}
+
+// Width Classes
+@for $i from 1 through 100 {
+  .is-width-#{$i} {
+    width: $i * 1% !important;
+  }
+}
+
+// display classes
+.is-none {
+  display: none !important;
+}
+.is-contents {
+  display: contents !important;
+}
+.is-inline-block {
+  display: inline-block !important;
+}
+.is-block {
+  display: block !important;
+}
+.is-inline-flex {
+  display: inline-flex !important;
+}
+.is-flex {
+  display: flex !important;
+}
+.is-inline-grid {
+  display: inline-grid !important;
+}
+.is-grid {
+  display: grid !important;
+}
+.is-inline {
+  display: inline !important;
+}
+.is-inline-table {
+  display: inline !important;
+}
+.is-table {
+  display: table !important;
+}
+.is-table-cell {
+  display: table-cell !important;
+}
+.is-table-column {
+  display: table-column !important;
+}
+.is-table-row {
+  display: table-row !important;
+}
+.is-table-caption {
+  display: table-caption !important;
+}
+.is-table-column-group {
+  display: table-column-group !important;
+}
+.is-table-header-group {
+  display: table-header-group !important;
+}
+.is-table-footer-group {
+  display: table-footer-group !important;
+}
+.is-table-row-group {
+  display: table-row-group !important;
+}
+
+// opacity classes
+@for $i from 1 through 10 {
+  .is-opacity-#{$i} {
+    opacity: $i * 0.1 !important;
+  }
+}
+
+// other Classes
+.is-visible {
+  visibility: visible !important;
+}
+.is-hidden {
+  visibility: hidden !important;
+}

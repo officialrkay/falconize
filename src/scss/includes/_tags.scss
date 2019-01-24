@@ -1,0 +1,41 @@
+.tag {
+    display: inline-flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 2.5px 12px;
+    border: 1px solid #efefef;
+
+    &.is-extra-small {
+      padding: 0.65px 3px;
+    }
+
+    &.is-small {
+      padding: 1.25px 6px;
+    }
+
+    &.is-large {
+      padding: 5px 18px;
+    }
+
+    &.is-extra-large {
+      padding: 7.5px 24px;
+    }
+
+    @each $type, $bgcolor in $bg-colors {
+        @if $type != 'link' {
+            &.is-#{$type} {
+                background-color: map-get( $bg-colors, $type );
+                border-color: darken( map-get( $bg-colors, $type ), 5% );
+                color: map-get( $bg-text-colors, $type );
+            }
+        }
+    }
+
+    &.is-link {
+        background-color: map-get( $bg-colors, 'link' );
+        border-color: transparent;
+        color: map-get( $bg-text-colors, 'link' );
+    }
+}

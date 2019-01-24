@@ -1,0 +1,197 @@
+.big-box {
+  display: flex;
+  flex-direction: column;
+  max-width: 1100px;
+  width: 100%;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &-full {
+    @extend .big-box;
+    max-width: 100%;
+  }
+
+  .boxes {
+    display: flex;
+    flex-direction: row;
+    margin: 0 -15px;
+
+    // Columns
+    @include media_query( 'xs' ) {
+      // High Defination
+      @for $i from 1 through $grids {
+        .box-hd-#{$i} {
+          padding: 0 15px;
+          flex: 0 0 100%;
+        }
+      }
+      // Extra large
+      @for $i from 1 through $grids {
+        .box-xl-#{$i} {
+          padding: 0 15px;
+          flex: 0 0 100%;
+        }
+      }
+      // Large Devices
+      @for $i from 1 through $grids {
+        .box-lg-#{$i} {
+          padding: 0 15px;
+          flex: 0 0 100%;
+        }
+      }
+      // Medium Devices
+      @for $i from 1 through $grids {
+        .box-md-#{$i} {
+          padding: 0 15px;
+          flex: 0 0 100%;
+        }
+      }
+      // Small Devices
+      @for $i from 1 through $grids {
+        .box-sm-#{$i} {
+          padding: 0 15px;
+          flex: 0 0 100%;
+        }
+      }
+      // Extra Small Devices
+      @for $i from 1 through $grids {
+        .box-#{$i} {
+          padding: 0 15px;
+          flex: 0 0 $i * 100% / $grids;
+        }
+      }
+    }
+    @include media_query( 'sm' ) {
+      // High Defination
+      @for $i from 1 through $grids {
+        .box-hd-#{$i} {
+          padding: 0 15px;
+          flex: 0 0 100%;
+        }
+      }
+      // Extra large
+      @for $i from 1 through $grids {
+        .box-xl-#{$i} {
+          padding: 0 15px;
+          flex: 0 0 100%;
+        }
+      }
+      // Large Devices
+      @for $i from 1 through $grids {
+        .box-lg-#{$i} {
+          padding: 0 15px;
+          flex: 0 0 100%;
+        }
+      }
+      // Medium Devices
+      @for $i from 1 through $grids {
+        .box-md-#{$i} {
+          padding: 0 15px;
+          flex: 0 0 100%;
+        }
+      }
+      // Small Devices
+      @for $i from 1 through $grids {
+        .box-sm-#{$i} {
+          padding: 0 15px;
+          flex: 0 0 $i * 100% / $grids;
+        }
+      }
+    }
+    // Medium Devices
+    @include media_query( 'md' ) {
+      // High Defination
+      @for $i from 1 through $grids {
+        .box-hd-#{$i} {
+          padding: 0 15px;
+          flex: 0 0 100%;
+        }
+      }
+      // Extra large
+      @for $i from 1 through $grids {
+        .box-xl-#{$i} {
+          padding: 0 15px;
+          flex: 0 0 100%;
+        }
+      }
+      // Large Devices
+      @for $i from 1 through $grids {
+        .box-lg-#{$i} {
+          padding: 0 15px;
+          flex: 0 0 100%;
+        }
+      }
+      // Medium Devices
+      @for $i from 1 through $grids {
+        .box-md-#{$i} {
+          padding: 0 15px;
+          flex: 0 0 $i * 100% / $grids;
+        }
+      }
+    }
+    // Large Devices
+    @include media_query( 'lg' ) {
+      // High Defination
+      @for $i from 1 through $grids {
+        .box-hd-#{$i} {
+          padding: 0 15px;
+          flex: 0 0 100%;
+        }
+      }
+      // Extra large
+      @for $i from 1 through $grids {
+        .box-xl-#{$i} {
+          padding: 0 15px;
+          flex: 0 0 100%;
+        }
+      }
+      // Large Devices
+      @for $i from 1 through $grids {
+        .box-lg-#{$i} {
+          padding: 0 15px;
+          flex: 0 0 $i * 100% / $grids;
+        }
+      }
+    }
+    // Extra Large Devices
+    @include media_query( 'xl' ) {
+      // High Defination
+      @for $i from 1 through $grids {
+        .box-hd-#{$i} {
+          padding: 0 15px;
+          flex: 0 0 100%;
+        }
+      }
+      // Extra large
+      @for $i from 1 through $grids {
+        .box-xl-#{$i} {
+          padding: 0 15px;
+          flex: 0 0 $i * 100% / $grids;
+        }
+      }
+    }
+    // High Defination Devices
+    @include media_query( 'hd' ) {
+      // High Defination
+      @for $i from 1 through $grids {
+        .box-hd-#{$i} {
+          padding: 0 15px;
+          flex: 0 0 $i * 100% / $grids;
+        }
+      }
+    }
+    // Offset Columns
+    @for $i from 1 through $grids {
+      .box-offset-#{$i} {
+        margin-left: 100%;
+      }
+    }
+    // Right Offset Columns
+    @for $i from 1 through $grids {
+      .box-offset-right-#{$i} {
+        margin-right: 100%;
+      }
+    }
+  }
+}

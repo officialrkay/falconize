@@ -1,0 +1,10 @@
+$grids: 24;
+
+$breakpoints: (
+  xs: 'max-width: 600px',
+  sm: 'min-width: 600px',
+  md: 'min-width: 768px',
+  lg: 'min-width: 992px',
+  xl: 'min-width: 1200px',
+  hd: 'min-width: 1408px'
+);

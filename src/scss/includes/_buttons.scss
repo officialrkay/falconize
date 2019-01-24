@@ -1,0 +1,79 @@
+.button {
+  display: inline-block;
+  font-weight: 600;
+  background-color: #fff;
+  border: 1.5px solid #eee;
+  padding: 6.25px 12.5px;
+  border-radius: 2.5px;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: hsl( 0, 0, 95% );
+  }
+
+  &:disabled {
+    opacity: 0.75 !important;
+    cursor: not-allowed;
+  }
+
+  &.is-extra-small {
+    padding: 2.5px 5px;
+  }
+
+  &.is-small {
+    padding: 5px 10px;
+  }
+
+  &.is-large {
+    padding: 7.5px 15px;
+  }
+
+  &.is-extra-large {
+    padding: 10px 20px;
+  }
+
+  @each $type, $bgcolor in $bg-colors {
+      @if $type != 'link' {
+          &.is-#{$type} {
+              background-color: map-get( $bg-colors, $type );
+              border-color: darken( map-get( $bg-colors, $type ), 5% );
+              color: map-get( $bg-text-colors, $type );
+
+              &:hover,
+              &:focus,
+              &.active {
+                background-color: darken( map-get( $bg-colors, $type ), 5% );
+              }
+
+              &:disabled {
+                background-color: map-get( $bg-colors, $type );
+                border-color: darken( map-get( $bg-colors, $type ), 5% );
+                color: map-get( $bg-text-colors, $type );
+              }
+          }
+      }
+  }
+
+  &.is-link {
+    background-color: map-get( $bg-colors, 'link' );
+    border-color: transparent;
+    color: map-get( $bg-text-colors, 'link' );
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: darken( map-get( $bg-text-colors, 'link' ), 10 );
+    }
+
+    &:disabled {
+      background-color: map-get( $bg-colors, 'link' );
+      border-color: transparent;
+      color: map-get( $bg-text-colors, 'link' );
+    }
+  }
+}
