@@ -16,7 +16,7 @@ module.exports = {
   },
   output: {
     path: path.resolve('./dist/assets/'),
-    filename: "triscss.min.js",
+    filename: "falconize.min.js",
   },
   module: {
     rules: [
@@ -43,11 +43,11 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin('dist', {
-      watch: true
+      verbose: true
     } ),
     extractSCSS,
     new HtmlWebpackPlugin({
-      title: 'Triscss',
+      title: 'Falconize',
       filename: '../../index.html',
       template: 'src/index.html'
     })
