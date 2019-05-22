@@ -7,6 +7,17 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
+    <nav class="navbar">
+        <span class="navbar-brand">Falconize</span>
+        <div class="navbar-menu">
+            <div class="navbar-end">
+                <a href="#" class="nav-item">Home</a>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">Features</a>
+                </div>
+            </div>
+        </div>
+    </nav>
     <div class="big-box">
         <div class="boxes">
             <div class="box-12 box-sm-24 box-lg-8 box-xl-18">
@@ -73,7 +84,7 @@
             </div>
         </div>
     </div>
-    <div id="modal" class="modal is-small" data-index="5">
+    <div id="modal" class="modal" data-index="5">
         <div class="modal-content">
             <div class="modal-header">
                 <div class="title">Modal</div>
@@ -82,6 +93,19 @@
             <div class="modal-body">Modal-body</div>
             <div class="modal-footer">
                 <button class="button is-small is-link" data-dismiss="modal" data-target="#modal">Close</button>
+                <button class="button is-small is-primary" data-toggle="modal" data-target="#modal1">Save</button>
+            </div>
+        </div>
+    </div>
+    <div id="modal1" class="modal is-small">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="title">Modal</div>
+                <button class="button is-link is-extra-small modal-close" data-dismiss="modal">Close</button>
+            </div>
+            <div class="modal-body">Modal-body</div>
+            <div class="modal-footer">
+                <button class="button is-small is-link" data-dismiss="modal" data-target="#modal1">Close</button>
                 <button class="button is-small is-primary">Save</button>
             </div>
         </div>
