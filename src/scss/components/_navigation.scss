@@ -1,0 +1,25 @@
+.navigation {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+
+    .nav-item {
+        background-color: transparent;
+
+        .nav-link {
+            display: inline-block;
+            padding: .5rem 1rem;
+            color: #676767;
+        }
+
+        &:hover {
+            background-color: #efefef;
+
+            .nav-link {
+                color: #333 !important;
+            }
+        }
+    }
+}
