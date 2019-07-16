@@ -8,13 +8,18 @@
     .nav-item {
         background-color: transparent;
 
-        &:hover {
-            background-color: #efefef;
+        .nav-link {
+            display: inline-block;
+            padding: .5rem 1rem;
+            color: #676767;
         }
 
-        .nav-link {
-            padding: .5rem 1rem;
-            color: #333;
+        &:hover {
+            background-color: #efefef;
+
+            .nav-link {
+                color: #333 !important;
+            }
         }
     }
 }
