@@ -107,3 +107,68 @@
 .is-hidden {
   visibility: hidden !important;
 }
+
+// Flex Classes
+.is-justify-centered {
+    justify-content: center !important;
+}
+
+.is-justify-start {
+    justify-content: flex-start !important;
+}
+
+.is-justify-end {
+    justify-content: flex-end !important;
+}
+
+.is-justify-around {
+    justify-content: space-around !important;
+}
+
+.is-justify-between {
+    justify-content: space-between !important;
+}
+
+.is-aligned-center {
+    align-items: center !important;
+}
+
+.is-aligned-start {
+    align-items: flex-start !important;
+}
+
+.is-aligned-end {
+    align-items: flex-end !important;
+}
+
+// Padding
+@for $i from 0 through 10 {
+    .p-#{$i} {
+        padding: $i * 5px !important;
+    }
+    .px-#{$i} {
+        padding-left: $i * 5px !important;
+        padding-right: $i * 5px !important;
+    }
+    .py-#{$i} {
+        padding-top: $i * 5px !important;
+        padding-bottom: $i * 5px !important;
+    }
+    .pl-#{$i} {
+        padding-left: $i * 5px !important;
+    }
+    .pr-#{$i} {
+        padding-right: $i * 5px !important;
+    }
+    .pt-#{$i} {
+        padding-top: $i * 5px !important;
+    }
+    .pb-#{$i} {
+        padding-bottom: $i * 5px !important;
+    }
+}
+
+// Background Classes
+.is-transparent {
+    background-color: transparent !important;
+}
